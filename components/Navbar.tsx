@@ -6,7 +6,7 @@ import Button from "./Button";
 
 const Navbar = () => {
   return (
-    <div className="flex flex-row items-center justify-between  ">
+    <div className="flex flex-row items-center justify-between px-2 ">
       <div className="flex gap-7">
       <Link href="/" className="shrink-0 w-[131px] h-[41px] relative">
         <div className="flex flex-row gap-1 items-center justify-start ">

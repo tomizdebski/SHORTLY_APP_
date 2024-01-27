@@ -13,6 +13,9 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      boxShadow: {
+        '3xl': '0 5px 80px 10px ',
+      },
       colors: {
         "red-nav": "rgba(228, 2, 2, 0.94)",
         white: "#fff",
@@ -38,14 +41,14 @@ const config: Config = {
       spacing: {},
       fontFamily: {
         saira: "'Saira Condensed'",
-        "body-text": "Inter",
+        inter: "Inter",
       },
     },
     fontSize: {
       base: "16px",
-      "31xl": "50px",
-      "8xl": "96px",
-      "13xl": "32px",
+      huge: "50px",
+      extraLarge: "96px",
+      medium: "32px",
       inherit: "inherit",
     },
   },

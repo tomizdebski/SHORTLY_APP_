@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "./Navbar";
 import Button from "./Button";
 import MainInput from "./MainInput";
 
@@ -11,11 +10,11 @@ const Hero = () => {
         alt=""
         src="/rectangle_black.svg"
       />
-      <div className="flex flex-col gap-[3px] items-start justify-start shrink-0 w-[522px] absolute top-20 left-20">
-        <div className="text-[#ffffff] text-left font-saira text-8xl leading-none font-bold relative self-stretch">
+      <div className="flex flex-col gap-3 items-start justify-start shrink-0 w-[522px] absolute top-20 left-20">
+        <div className="text-[#ffffff] text-left font-saira text-huge leading-none font-bold relative self-stretch">
           More than just shorter links{" "}
         </div>
-        <div className="text-[#ffffff] text-left font-bodytext-font-family text-bodytext-font-size leading-bodytext-line-height font-bodytext-font-weight relative self-stretch h-[63px]">
+        <div className="text-[#ffffff] text-left font-inter leading-5 relative self-stretch h-[63px]">
           Build your brand’s recognition and get detailed
           <br />
           insight on your links are performing{" "}
@@ -28,7 +27,7 @@ const Hero = () => {
 
         
       </div>
-<MainInput />
+
     </div>
   );
 };
