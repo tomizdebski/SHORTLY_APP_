@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <div className="w-full flex justify-between text-soft-grey relative bg-white items-center">
       <img
-        className="flex relative w-[100%]   z-[0] object-cover shrink-0 min-h-[700px] lg:min-h-[550px] max-h-[650px] "
+        className="flex  z-[0] object-cover shrink-0 min-h-[850px] lg:min-h-[550px]  "
         alt=""
         src="/rectangle_black.svg"
       />
