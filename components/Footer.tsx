@@ -85,8 +85,8 @@ const Footer = () => {
         </div>
 </div>
       </div>
-      <div className="flex flex-row  justify-between w-[1031.66px] h-[27px] relative">
-        <div className="flex flex-row gap-[7px] items-center justify-start shrink-0 w-[198px] relative">
+      <div className="flex flex-row  justify-center xl:justify-between w-[1031.66px] h-[27px] relative">
+        <div className="flex flex-row gap-[7px] items-center justify-start  w-[198px] relative">
           <div className="flex flex-row gap-1 items-center justify-start ">
             <Image
               src="message.svg"
@@ -101,7 +101,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-row gap-[54px] items-start justify-start shrink-0 relative">
+        <div className="flex flex-row gap-[54px] items-start justify-start  relative">
           <div className="text-[#ffffff] text-center xl:text-left font-bodytext-font-family text-bodytext-font-size leading-bodytext-line-height font-bodytext-font-weight relative">
             Privacy policy{" "}
           </div>
