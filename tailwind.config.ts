@@ -23,7 +23,7 @@ const config: Config = {
         gray: "rgba(255, 255, 255, 0)",
       },
       screens: {
-        'sm': '600px',
+        'sm': '500px',
         // => @media (min-width: 640px) { ... }
   
         'md': '768px',

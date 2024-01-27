@@ -12,7 +12,7 @@ const CardsInfo = () => {
         statistics dashboard{" "}
       </div>
 
-      <div className="flex gap-3">
+      <div className="flex gap-3 flex-wrap px-auto justify-center">
         <Card />
         <Card />
         <Card />
