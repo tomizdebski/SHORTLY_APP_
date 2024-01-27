@@ -4,6 +4,7 @@ import Image from "next/image";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import MainInput from "@/components/MainInput";
+import CardsInfo from "@/components/CardsInfo";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       
      <Hero />
       <MainInput />
+      <CardsInfo />
     
      
     </main>

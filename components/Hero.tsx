@@ -12,7 +12,7 @@ const Hero = () => {
       />
       <div className="flex  flex-col lg:flex-row absolute top-20 left-20 xl:left-60 gap-3">
       <div className="flex flex-col gap-3 items-start justify-start shrink-0 w-[522px] ">
-        <div className="text-[#ffffff] text-left font-saira text-huge leading-none font-bold relative self-stretch">
+        <div className="text-[#ffffff] text-left font-saira text-extraLarge leading-none font-bold relative self-stretch">
           More than just shorter links{" "}
         </div>
         <div className="text-[#ffffff] text-left font-inter leading-5 relative self-stretch h-[63px]">
