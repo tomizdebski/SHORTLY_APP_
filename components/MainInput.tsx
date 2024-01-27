@@ -5,7 +5,7 @@ const MainInput = () => {
   return (
     <div className="flex bg-white mx-auto h-0">
     <div
-      className="bg-black rounded pt-[34px] pr-[34px] pb-[34px] pl-[34px] flex flex-row  items-center justify-between w-[80vh]  h-[111.8px]  align-middle shadow-3xl  shadow-red-600 relative top-[-100px]"
+      className="bg-black   rounded pt-[34px] pr-[34px] pb-[34px] pl-[34px] flex flex-row  items-center justify-between w-[90vh] sm:w-[60vh] md:w-[70vh] lg:w-[90vh] h-[111.8px]  align-middle shadow-3xl  shadow-red-600 relative top-[-100px]"
     >
       <div className="flex flex-row items-center justify-between w-[1030px] relative">
         <input className="bg-white w-full h-12 relative"></input>
