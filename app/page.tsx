@@ -5,6 +5,7 @@ import "./globals.css";
 import Footer from "@/components/Footer";
 import MainInput from "@/components/MainInput";
 import CardsInfo from "@/components/CardsInfo";
+import BottomBanner from "@/components/BottomBanner";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
      <Hero />
       <MainInput />
       <CardsInfo />
+      <BottomBanner />
     
      
     </main>
