@@ -10,7 +10,7 @@ const Hero = () => {
         alt=""
         src="/rectangle_black.svg"
       />
-      <div className="flex  flex-col lg:flex-row absolute top-20 left-20 xl:left-60 gap-3">
+      <div className="flex  flex-col lg:flex-row absolute top-20  gap-3 w-full  left-0 justify-center">
       <div className="flex flex-col gap-3 items-start justify-start shrink-0 w-[522px] ">
         <div className="text-[#ffffff] text-left font-saira text-extraLarge leading-none font-bold relative self-stretch">
           More than just shorter links{" "}
