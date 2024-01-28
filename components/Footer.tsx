@@ -3,8 +3,8 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <div className="flex flex-col items-center justify-between min-h-[400px] bg-black p-10">
-      <div className="flex xs:flex-col lg:flex-row  xs:items-center  lg:items-start justify-between  relative overflow">
+    <div className="flex flex-col items-center justify-between min-h-[400px]  bg-black p-10">
+      <div className="flex xs:flex-col lg:flex-row  xs:items-center  lg:items-start justify-between  relative ]">
         <div className="text-red-nav text-center lg:text-left font-saira text-huge  relative">
           Shortly{" "}
         </div>
@@ -85,7 +85,7 @@ const Footer = () => {
         </div>
 </div>
       </div>
-      <div className="flex flex-row  justify-center xl:justify-between  h-[27px] relative">
+      <div className="flex flex-col  justify-center xl:justify-between   relative">
         <div className="flex flex-row gap-[7px] items-center justify-start  w-[198px] relative">
           <div className="flex flex-row gap-1 items-center justify-start ">
             <Image
