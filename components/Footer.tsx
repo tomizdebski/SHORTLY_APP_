@@ -4,50 +4,50 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <div className="flex flex-col items-center justify-between min-h-[400px] bg-black p-10">
-      <div className="flex xs:flex-col lg:flex-row  xs:items-center  xl:items-start justify-between w-[1032.59px]  relative">
-        <div className="text-red-nav text-center xl:text-left font-saira text-huge  relative">
+      <div className="flex xs:flex-col lg:flex-row  xs:items-center  lg:items-start justify-between w-[1032.59px]  relative">
+        <div className="text-red-nav text-center lg:text-left font-saira text-huge  relative">
           Shortly{" "}
         </div>
 
-        <div className="flex flex-col gap-[17px] items-start justify-start shrink-0 relative">
-          <div className="text-white text-center xl:text-left font-bold  relative w-[104px]">
+        <div className="flex flex-col gap-[17px] shrink-0">
+          <div className="text-white text-center lg:text-left font-bold  relative w-[104px]">
             Features{" "}
           </div>
-          <div className="text-soft-grey text-center xl:text-left  relative">
+          <div className="text-soft-grey text-center lg:text-left relative">
             Link Shortening{" "}
           </div>
-          <div className="text-soft-grey text-center xl:text-left  relative">
+          <div className="text-soft-grey text-center lg:text-left relative">
             Branded Links{" "}
           </div>
-          <div className="text-soft-grey text-center xl:text-left  relative">
+          <div className="text-soft-grey text-center lg:text-left  relative">
             Analytics{" "}
           </div>
         </div>
-        <div className="flex flex-col gap-[17px] items-start justify-start shrink-0 relative">
-          <div className="text-white text-center xl:text-left font-bold  relative w-[104px]">
+        <div className="flex flex-col gap-[17px] shrink-0 relative">
+          <div className="text-white text-center lg:text-left font-bold  relative w-[104px]">
             Resources{" "}
           </div>
-          <div className="text-soft-grey text-center xl:text-left  relative">
+          <div className="text-soft-grey text-center lg:text-left  relative">
             Link Sharing{" "}
           </div>
-          <div className="text-soft-grey text-center xl:text-left  relative">
+          <div className="text-soft-grey text-center lg:text-left  relative">
             Branded Links{" "}
           </div>
-          <div className="text-soft-grey text-center xl:text-left  relative">
+          <div className="text-soft-grey text-center lg:text-left  relative">
             Analytics{" "}
           </div>
         </div>
-        <div className="flex flex-col gap-[17px] items-start justify-start shrink-0 relative">
-          <div className="text-white text-center xs:text-center xl:text-left font-bold  relative w-[104px]">
+        <div className="flex flex-col gap-[17px]  shrink-0 relative">
+          <div className="text-white text-center xs:text-center lg:text-left font-bold  relative w-[104px]">
             Company{" "}
           </div>
-          <div className="text-soft-grey text-center xl:text-left  relative">
+          <div className="text-soft-grey text-center lg:text-left  relative">
             Link Sharing{" "}
           </div>
-          <div className="text-soft-grey text-center xl:text-left  relative">
+          <div className="text-soft-grey text-center lg:text-left  relative">
             Branded Links{" "}
           </div>
-          <div className="text-soft-grey text-center xl:text-left  relative">
+          <div className="text-soft-grey text-center lg:text-left  relative">
             Analytics{" "}
           </div>
           
@@ -96,16 +96,16 @@ const Footer = () => {
               className=""
             />
 
-            <div className="text-[#ffffff] text-center xl:text-left font-bodytext-font-family text-bodytext-font-size leading-bodytext-line-height font-bodytext-font-weight relative">
+            <div className="text-[#ffffff] text-center lg:text-left font-bodytext-font-family text-bodytext-font-size leading-bodytext-line-height font-bodytext-font-weight relative">
               info@shortly.com{" "}
             </div>
           </div>
         </div>
         <div className="flex flex-row gap-[54px] items-start justify-start  relative">
-          <div className="text-[#ffffff] text-center xl:text-left font-bodytext-font-family text-bodytext-font-size leading-bodytext-line-height font-bodytext-font-weight relative">
+          <div className="text-[#ffffff] text-center lg:text-left font-bodytext-font-family text-bodytext-font-size leading-bodytext-line-height font-bodytext-font-weight relative">
             Privacy policy{" "}
           </div>
-          <div className="text-[#ffffff] text-center xl:text-left font-bodytext-font-family text-bodytext-font-size leading-bodytext-line-height font-bodytext-font-weight relative">
+          <div className="text-[#ffffff] text-center lg:text-left font-bodytext-font-family text-bodytext-font-size leading-bodytext-line-height font-bodytext-font-weight relative">
             Terms &amp; conditions{" "}
           </div>
         </div>
