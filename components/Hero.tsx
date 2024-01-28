@@ -4,14 +4,14 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <div className="w-full flex justify-between text-soft-grey relative bg-white items-center">
+    <div className="w-full flex justify-between text-soft-grey relative bg-white items-center ">
       <img
         className="flex  z-[0] object-cover min-h-[850px] lg:min-h-[650px]  "
         alt=""
         src="/rectangle_black.svg"
       />
-      <div className="flex  flex-col lg:flex-row absolute top-20  gap-3 w-full  left-0 justify-center">
-      <div className="flex flex-col gap-3 items-start justify-start shrink-0 ">
+      <div className="flex  flex-col lg:flex-row absolute top-20  gap-20 w-full left-5 lg:left-0  justify-center">
+      <div className="flex flex-col gap-3 items-start justify-center shrink-0 ">
         <div className="text-[#ffffff] text-left text-huge font-saira  leading-none font-bold relative self-stretch">
           More than just shorter links{" "}
         </div>
