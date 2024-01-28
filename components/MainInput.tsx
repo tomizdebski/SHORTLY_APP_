@@ -3,7 +3,7 @@ import Button from "./Button";
 
 const MainInput = () => {
   return (
-    <div className="flex bg-white h-0 mx-auto w-[80%] justify-center">
+    <div className="flex bg-white h-0 mx-auto w-[90%] justify-center">
     <div
       className="bg-black   rounded pt-[34px] pr-[34px] pb-[34px] pl-[34px] flex flex-row  items-center justify-between  xs:w-[60vh] sm:w-[60vh] md:w-[70vh] lg:w-[70vh] h-[111.8px]  align-middle shadow-3xl  shadow-red-600 relative top-[-100px]  "
     >

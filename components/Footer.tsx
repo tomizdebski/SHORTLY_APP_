@@ -85,7 +85,7 @@ const Footer = () => {
         </div>
 </div>
       </div>
-      <div className="flex flex-col  justify-center xl:justify-between   relative">
+      <div className="flex flex-col md:flex-row justify-center xl:justify-between   relative">
         <div className="flex flex-row gap-[7px] items-center justify-start  w-[198px] relative">
           <div className="flex flex-row gap-1 items-center justify-start ">
             <Image
