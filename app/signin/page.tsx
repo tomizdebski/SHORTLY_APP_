@@ -15,13 +15,13 @@ export default async function SignIn() {
 
 
   return (
-    <div className=" mx-auto my-[300px] border  p-10  bg-slate-200">
-        <div className='flex gap-5 '>
+    <div className=" mx-auto my-[100px] md:my-[300px] border  p-10  bg-slate-200">
+        <div className='flex-col md:flex gap-5 '>
         <h1 className="text-huge font-saira text-center text-black">Zaloguj się do </h1>
         <div className="flex flex-row gap-1 items-center justify-start ">
             
 
-            <div className="text-red-nav text-left font-saira text-huge leading-[90%] font-bold relative">
+            <div className="text-red-nav  text-left font-saira text-huge leading-[90%] font-bold relative">
               Shortly{" "}
             </div>
             <Image
