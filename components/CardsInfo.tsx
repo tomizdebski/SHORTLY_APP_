@@ -7,7 +7,7 @@ const CardsInfo = () => {
       <div className="text-grey text-left font-saira text-[50px] leading-[110%] font-bold relative">
         Advanced Statistics{" "}
       </div>
-      <div className="text-grey text-center font-inter  relative leading-5 w-[446px]">
+      <div className="text-grey text-center font-inter  relative leading-5 w[200px]-">
         Track how your links are performing across the web with our advanced
         statistics dashboard{" "}
       </div>
