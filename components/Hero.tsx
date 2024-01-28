@@ -10,8 +10,8 @@ const Hero = () => {
         alt=""
         src="/rectangle_black.svg"
       />
-      <div className="flex  flex-col lg:flex-row absolute top-20  gap-20 w-full left-5 lg:left-0  justify-center">
-      <div className="flex flex-col gap-3 items-start justify-center shrink-0 ">
+      <div className="flex  flex-col lg:flex-row absolute top-20  gap-20 w-full  left-0  justify-center">
+      <div className="flex flex-col gap-3  justify-center  shrink-0 ">
         <div className="text-[#ffffff] text-left text-huge font-saira  leading-none font-bold relative self-stretch">
           More than just shorter links{" "}
         </div>
@@ -20,10 +20,11 @@ const Hero = () => {
           <br />
           insight on your links are performing{" "}
         </div>
+        
         <Button
               text="Get Started"
               url="/signup"
-              className="bg-red-nav pt-[12px] pr-[24px] pb-[12px] pl-[24px] flex flex-row  items-center justify-center shrink-0 text-[#ffffff] text-left font-saira hover:bg-red-400"
+              className="bg-red-nav pt-[12px] pr-[24px] pb-[12px] pl-[24px] flex flex-row  items-center  justify-center shrink-0 text-[#ffffff] text-left font-saira hover:bg-red-400"
             />
       </div>
       <Image
