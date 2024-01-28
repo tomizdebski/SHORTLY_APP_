@@ -21,6 +21,7 @@ const config: Config = {
         white: "#fff",
         "soft-grey": "#e8e8e8",
         gray: "rgba(255, 255, 255, 0)",
+        blue: "#4B7DFB"
       },
       screens: {
         'xs': '320px',
