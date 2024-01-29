@@ -9,7 +9,7 @@ export const POST = async (req: Request) => {
         if(!name || !email || !password) return NextResponse.json({ error: 'Please fill all fields' }, { status: 422 });
         const hashedPassword = await  bcrypt.hash(password, 10);
         await connectToDatabase();
-        const user = await prisma.user.create({data: { name, email, hashedPassword }});
+        const user = await prisma.user.create({data: { name, email}});
         return NextResponse.json(user, { status: 201 });
     } catch (error) {
         console.log(error);
