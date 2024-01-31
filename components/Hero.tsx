@@ -4,9 +4,9 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <div className="w-full flex justify-between text-soft-grey relative bg-white items-center ">
+    <div className="w-full flex justify-between text-soft-grey relative items-center bg-white">
       <img
-        className="flex  z-[0] object-cover min-h-[850px] lg:min-h-[650px]  "
+        className="flex  z-[0] object-cover min-h-[850px] lg:min-h-[650px] "
         alt=""
         src="/rectangle_black.svg"
       />
