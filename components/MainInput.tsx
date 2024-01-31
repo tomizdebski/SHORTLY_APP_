@@ -3,9 +3,9 @@ import Button from "./Button";
 
 const MainInput = () => {
   return (
-    <div className="flex bg-white h-0 mx-auto w-[90%] justify-center">
+    <div className="flex bg-white h-0 mx-auto w-[100%] justify-center">
     <div
-      className="bg-black   rounded pt-[34px] pr-[34px] pb-[34px] pl-[34px] flex flex-row  items-center justify-between  xs:w-[60vh] sm:w-[60vh] md:w-[56vh]  h-[111.8px]  align-middle shadow-3xl  shadow-red-600 relative top-[-100px]  "
+      className="bg-black   rounded p-[34px] flex flex-row  items-center justify-between  xs:w-[60vh] sm:w-[60vh] md:w-[90vh]  h-[111.8px]  align-middle shadow-3xl  shadow-red-600 relative top-[-100px]  "
     >
       <div className="flex flex-row items-center justify-between w-[100%] relative">
         <input className="bg-white rounded-none w-full h-12 relative"></input>
