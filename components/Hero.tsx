@@ -10,12 +10,12 @@ const Hero = () => {
         alt=""
         src="/rectangle_black.svg"
       />
-      <div className="flex px-4 flex-col lg:flex-row absolute top-20  gap-20 w-full  left-0  justify-center">
-      <div className="flex flex-col gap-3  justify-center  shrink-0 ">
-        <div className="text-[#ffffff] text-left text-huge font-saira  leading-none font-bold relative self-stretch shrink-0">
+      <div className="flex px-4 flex-col lg:flex-row absolute top-20  gap-20 w-full  left-0  justify-center items-center">
+      <div className="flex flex-col gap-3  justify-center items-center lg:items-start shrink-0 ">
+        <div className="text-[#ffffff] text-center lg:text-left text-huge font-saira  leading-none font-bold relative self-stretch shrink-0">
           More than just shorter links{" "}
         </div>
-        <div className="text-[#ffffff] text-left font-inter leading-5 relative self-stretch h-[63px]">
+        <div className="text-[#ffffff] text-center lg:text-left font-inter leading-5 relative self-stretch h-[63px]">
           Build your brand’s recognition and get detailed
           <br />
           insight on your links are performing{" "}
