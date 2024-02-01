@@ -7,11 +7,11 @@ const BottomBanner = () => {
   return (
     <div className="w-full flex justify-between text-soft-grey relative bg-white items-center">
       <img
-        className="flex  z-[0] object-cover min-h-[550px]  "
+        className="flex  z-[0] object-cover min-h-[400px]  "
         alt=""
         src="/reactangle_blue.svg"
       />
-      <div className="flex  flex-col w-full absolute top-60 left-0 items-center  gap-9">
+      <div className="flex  flex-col w-full absolute top-50 left-0 items-center  gap-9">
       
         <div className="text-[#ffffff] text-center font-saira text-huge leading-none font-bold relative self-stretch">
           Boost your links today
