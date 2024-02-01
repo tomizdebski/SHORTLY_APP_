@@ -17,7 +17,7 @@ const MainInput = () => {
         </div>
       </div>
 
-      <div className="bg-black p-6 flex flex-col gap-3  relative top-[-100px] shadow-3xl  shadow-red-600 h-[144px] w-[80%] sm:hidden">
+      <div className="bg-black p-6 flex flex-col gap-3  relative top-[-100px] shadow-3xl  shadow-red-600 h-[144px] w-[90%] sm:hidden">
         <div className="bg-[#ffffff] self-stretch shrink-0 h-[42px] relative overflow-hidden"></div>
         <div className="bg-[rgba(228,2,2,0.94)] pt-3 pr-[97px] pb-3 pl-[97px] flex flex-col h-[42px] gap-3 items-center justify-center self-stretch relative overflow-hidden hover:bg-red-400">
           <Button 
