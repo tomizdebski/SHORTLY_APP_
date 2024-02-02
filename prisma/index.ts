@@ -9,6 +9,15 @@ declare global {
     }
 }
 
+
+
+// `declare global { ... }`: Te bloki kodu rozszerzają interfejs `Global` z przestrzeni nazw `NodeJS`. Dodają one do globalnego obiektu właściwość `prisma`, która jest typu `PrismaClient`. Pozwala to na globalny dostęp do klienta Prisma w Twojej aplikacji.
+
+//`let prisma: PrismaClient;`: Ta linia deklaruje zmienną `prisma` typu `PrismaClient`. Ta zmienna będzie używana do przechowywania instancji klienta Prisma.
+
+
+
+
 let prisma: PrismaClient;
 
 declare global {
