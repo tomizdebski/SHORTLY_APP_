@@ -5,7 +5,7 @@ const CopyButton = ({ text }: {text:String}) => {
     const copyToClipboard = async () => {
       try {
         await navigator.clipboard.writeText(text as string);
-        alert('Link copied to clipboard!');
+        alert(`Link copied to clipboard : ${text}!`);
       } catch (error) {
         console.error('Failed to copy:', error);
         alert('Failed to copy link!');
