@@ -8,6 +8,7 @@ import { Logout } from "./Buttons";
 
 const Navbar = async () => {
   const session = await getServerSession(authOptions);
+  console.log(session)
 
   return (
     <div className="flex flex-row items-center justify-between ">

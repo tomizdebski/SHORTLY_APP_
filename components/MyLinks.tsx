@@ -5,7 +5,7 @@ import Button from "./Button";
 const MyLinks = () => {
   return (
     <div className="flex w-[100%] items-center bg-white">
-      <div className="w-[100vh] h-auto  items-center justify-between flex pt-10 bg-white m-auto">
+      <div className="w-[1000px] h-auto  items-center justify-between flex pt-10 bg-white m-auto">
         <div className="p-2.5 justify-center items-center gap-2.5 flex">
           <div className="text-black text-base font-bold font-saira leading-[17.60px]">
             https://shortly-v1.vercel.app
