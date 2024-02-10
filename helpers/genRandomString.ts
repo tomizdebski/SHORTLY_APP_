@@ -5,7 +5,8 @@ function generateRandomString(length: number) {
       const randomIndex = Math.floor(Math.random() * alphabet.length);
       result += alphabet[randomIndex];
     }
-    return result;
+
+    return process.env.NEXT_PUBLIC_URL + result;
   }
 
   export default generateRandomString;
