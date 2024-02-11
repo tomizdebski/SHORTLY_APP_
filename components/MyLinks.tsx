@@ -1,13 +1,29 @@
-import React from "react";
+'use client';
+import React, { use, useEffect, useState } from "react";
 import Image from "next/image";
 import Button from "./Button";
+import axios from "axios";
 
-const MyLinks = () => {
 
-    
+
+
+const MyLinks = ({email}: any) => {
+
+    const [links, setLinks] = useState([]);
+
+     useEffect(() => {
+      axios.get(process.env.NEXT_PUBLIC_URL + "api/links?query=" + email).then((req) => {
+        const { data } = req;
+        console.log(data)
+        
+      });
+     }, []);
+
+     
 
   return (
     <div className="flex w-[100%] items-center bg-white">
+
       <div className="w-[1000px] h-auto  items-center justify-between flex flex-col sm:flex-row pt-20 sm:pt-10 bg-white m-auto">
         <div className="p-2.5 justify-center items-center gap-2.5 flex">
           <div className="text-black text-base font-bold font-saira leading-[17.60px]">
@@ -29,6 +45,7 @@ const MyLinks = () => {
           </div>
         </div>
       </div>
+
     </div>
   );
 };

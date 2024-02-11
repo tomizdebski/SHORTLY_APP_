@@ -5,19 +5,21 @@ import CopyButton from "./CopyButton";
 import { useState } from "react";
 import generateRandomString from "../helpers/genRandomString";  
 
-const MainInput = () => {
-  const [link, setLink] = useState("");
-  const [shortLink, setShortLink] = useState("");
+const MainInput = ({email}: any) => {
+  const [url, setUrl] = useState("");
+  const [shortUrl, setShortUrl] = useState("");
+  console.log(email);
 
   const genLink = () => {
-    setShortLink(generateRandomString(6));
-    console.log(shortLink);
+    setShortUrl(generateRandomString(6));
+   
   };
 
-  const saveLinkToDb = () => {
-    fetch("http://localhost:3000/api/add_link", {
+  const saveLinkToDb = async () => {
+    await genLink();
+    await fetch(process.env.NEXT_PUBLIC_URL + "api/links", {
       method: "POST",
-      body: JSON.stringify({ shortLink, link }),
+      body: JSON.stringify({ url, shortUrl, email }),
     })
       .then((res) => res.json())
       .then((data) => {
@@ -31,13 +33,13 @@ const MainInput = () => {
         <div className="flex flex-col sm:flex-row items-center justify-between w-[100%] relative">
           <input
             className="bg-white text-black rounded-none w-full h-12 relative pl-3"
-            onChange={(ev) => setLink(ev.target.value)}
+            onChange={(ev) => setUrl(ev.target.value)}
           />
           <div className="flex flex-row gap-0 items-start justify-start shrink-0 relative">
            
             <button 
             className="bg-red-nav py-[12px] px-[88px] sm:py-[12px] sm:px-[24px]  flex-1 text-center  text-[#ffffff]  font-saira hover:bg-red-400"
-            onClick={() => genLink()}
+            onClick={() => saveLinkToDb()}
             >
               Shorten It!
             </button>
@@ -50,7 +52,7 @@ const MainInput = () => {
         <div className="bg-[rgba(228,2,2,0.94)] pt-3 pr-[97px] pb-3 pl-[97px] flex flex-col h-[42px] gap-3 items-center justify-center self-stretch relative overflow-hidden hover:bg-red-400">
           <button
             className="text-[#ffffff] text-left font-saira  relative  "
-            onClick={() => genLink()}
+            onClick={() => saveLinkToDb()}
           >
             Shorten It!
           </button>

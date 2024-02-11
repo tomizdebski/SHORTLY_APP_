@@ -4,10 +4,10 @@ import { NextResponse } from "next/server";
 import { type NextRequest } from 'next/server'
 
 
-export const POST = async (req: Request) => {
+export const POST = async (req: Request) => { // http://localhost:3000/api/add_link
     try {
         const { url, shortUrl, email} = await req.json();
-        if(!url || !shortUrl) return NextResponse.json({ error: 'Error no urls' }, { status: 422 });
+        if(!url || !email || !shortUrl) return NextResponse.json({ error: 'Error no urls' }, { status: 422 });
         await connectToDatabase();
         const newUrl = await prisma.shortUrl.create({data: { url, shortUrl, email}});
         return NextResponse.json(newUrl, { status: 201 });
@@ -19,7 +19,7 @@ export const POST = async (req: Request) => {
     }
 };
 
-export const GET = async (req: NextRequest) => {
+export const GET = async (req: NextRequest) => { // http://localhost:3000/api/add_link?query=123456
     try {
         await connectToDatabase();
         const  searchParams  = req.nextUrl.searchParams;
