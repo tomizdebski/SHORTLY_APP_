@@ -2,7 +2,7 @@
 import React from "react";
 import Button from "./Button";
 import CopyButton from "./CopyButton";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import generateRandomString from "../helpers/genRandomString";  
 
 const MainInput = ({email}: any) => {
@@ -10,13 +10,15 @@ const MainInput = ({email}: any) => {
   const [shortUrl, setShortUrl] = useState("");
   console.log(email);
 
-  const genLink = () => {
+
+  useEffect(() => {
     setShortUrl(generateRandomString(6));
-   
-  };
+  }, [url])
+  
+  
 
   const saveLinkToDb = async () => {
-    await genLink();
+    
     await fetch(process.env.NEXT_PUBLIC_URL + "api/links", {
       method: "POST",
       body: JSON.stringify({ url, shortUrl, email }),
