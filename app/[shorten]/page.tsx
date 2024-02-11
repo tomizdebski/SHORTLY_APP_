@@ -5,7 +5,7 @@ import axios from "axios";
 
 
 
-const shorten = () => {
+const Shorten = () => {
 
         const params = useParams<{ shorten: string}>();
         console.log("danez linka", params.shorten);
@@ -26,5 +26,5 @@ const shorten = () => {
 }
 
 
-export default shorten
+export default Shorten
 
