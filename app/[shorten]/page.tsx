@@ -15,15 +15,13 @@ const shorten = () => {
                         const { data } = resp;
                         console.log('url_redirect ' + data.url)
                         window.location.href = data.url; // Przekierowanie na inną stronę
-                        // lub
-                        // window.location.replace(data.url); // Przekierowanie na inną stronę z zamianą historii przeglądarki
                     });
             
      
         
 
     return (
-        <div> shorten</div>
+        <div className="w-full h-full"> ....loading</div>
     )
 }
 
