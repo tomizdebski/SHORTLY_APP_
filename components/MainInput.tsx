@@ -32,6 +32,7 @@ const MainInput = ({email}: any) => {
         if(!data.error) {setLinks([...links, data])};
         console.log(data);
       });
+      await setUrl("");
   };
 
   return (
@@ -41,6 +42,9 @@ const MainInput = ({email}: any) => {
           <input
             className="bg-white text-black rounded-none w-full h-12 relative pl-3"
             onChange={(ev) => setUrl(ev.target.value)}
+            type="text"
+            placeholder="Shorten a link here..."
+            value={url}
           />
           <div className="flex flex-row gap-0 items-start justify-start shrink-0 relative">
            
