@@ -1,39 +1,45 @@
 'use client';
-import React, { use, useEffect, useState } from "react";
+import React, { useEffect, useContext } from "react";
 import Image from "next/image";
 import Button from "./Button";
 import axios from "axios";
+import { LinksContext } from "./LinksContext";
 
+type Link = {
+  url: string;
+  shortUrl: string;
+  email: string;
+}
 
 
 
 const MyLinks = ({email}: any) => {
 
-    const [links, setLinks] = useState([]);
+    const { links, setLinks } = useContext(LinksContext) as any;
 
-     useEffect(() => {
-      axios.get(process.env.NEXT_PUBLIC_URL + "api/links?query=" + email).then((req) => {
-        const { data } = req;
-        console.log(data)
+    //  useEffect(() => {
+    //   axios.get(process.env.NEXT_PUBLIC_URL + "api/links?query=" + email).then((req) => {
+    //     const { data } = req;
+    //     console.log('moje linki ' + data)
         
-      });
-     }, []);
+    //   });
+    //  }, []);
 
      
 
   return (
-    <div className="flex w-[100%] items-center bg-white">
+    <div className="flex flex-col w-[100%] items-center bg-white pt-10">
 
-      <div className="w-[1000px] h-auto  items-center justify-between flex flex-col sm:flex-row pt-20 sm:pt-10 bg-white m-auto">
+        {links.map((el : Link) => (<div className="w-[1000px] h-auto  items-center justify-between flex flex-col sm:flex-row pt-5 bg-white m-auto">
         <div className="p-2.5 justify-center items-center gap-2.5 flex">
           <div className="text-black text-base font-bold font-saira leading-[17.60px]">
-            https://shortly-v1.vercel.app
+            {el.url}
           </div>
         </div>
         <div className="h-12 justify-between items-center flex">
           <div className="h-[47px] p-2.5 justify-center items-center gap-2.5 flex">
             <div className="grow shrink basis-0 text-red-600 text-base font-bold font-saira leading-7">
-              https://shortly-v1.vercel.app
+              {el.shortUrl}
             </div>
           </div>
           <div className="justify-center items-center flex gap-2">
@@ -44,7 +50,10 @@ const MyLinks = ({email}: any) => {
             </button>
           </div>
         </div>
-      </div>
+      </div>))}
+
+
+      
 
     </div>
   );

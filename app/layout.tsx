@@ -6,6 +6,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { LinksContextProvider } from "@/components/LinksContext";
 // Import the 'Navbar' component
 
 const inter = Inter({ subsets: ["latin"] });
@@ -25,11 +26,13 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className="flex flex-col items-stretch w-full">
-        <NextAuthProvider>
-          <Navbar />
-          {children}
-          <Footer />
-        </NextAuthProvider>
+        <LinksContextProvider>
+          <NextAuthProvider>
+            <Navbar />
+            {children}
+            <Footer />
+          </NextAuthProvider>
+        </LinksContextProvider>
       </body>
     </html>
   );

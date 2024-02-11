@@ -4,11 +4,15 @@ import Button from "./Button";
 import CopyButton from "./CopyButton";
 import { useState, useEffect } from "react";
 import generateRandomString from "../helpers/genRandomString";  
+import { useContext } from "react";
+import { LinksContext } from "./LinksContext";
+import { set } from "mongoose";
 
 const MainInput = ({email}: any) => {
   const [url, setUrl] = useState("");
   const [shortUrl, setShortUrl] = useState("");
-  console.log(email);
+  const { links, setLinks } = useContext(LinksContext) as any;
+  console.log("context", links);
 
 
   useEffect(() => {
@@ -25,6 +29,7 @@ const MainInput = ({email}: any) => {
     })
       .then((res) => res.json())
       .then((data) => {
+        setLinks([...links, data]);
         console.log(data);
       });
   };
