@@ -4,6 +4,7 @@ import Image from "next/image";
 import Button from "./Button";
 import axios from "axios";
 import { LinksContext } from "./LinksContext";
+import CopyButton from "./CopyButton";
 
 
 
@@ -46,7 +47,7 @@ const MyLinks = ({email}: any) => {
           </div>
           <div className="justify-center items-center flex gap-2">
            
-            <div className="main_btn">Copy !</div>
+            <CopyButton text={el.shortUrl} />
              <button className="w-12 h-12 p-3 bg-white border border-red-600 bg-opacity-95 justify-center items-center gap-2.5 flex  hover:bg-red-400">
               <Image src="red_remove.svg" width={16} height={16} alt="remove" />
             </button>
