@@ -1,8 +1,8 @@
 import React from 'react'
 import Image from "next/image";
-import { MainLogin } from "./../../components/Buttons";
+import { MainLogin } from "../../../components/Buttons";
 import { getServerSession } from "next-auth";
-import { authOptions } from "./../lib/auth";
+import { authOptions } from "../../lib/auth";
 import { redirect } from "next/navigation";
 import Hero from '@/components/Hero';
 

@@ -15,8 +15,8 @@ export default async function Home() {
   return (
     <main className="flex flex-col  justify-between ">
       <Hero />
-      <MainInput email={session?.user?.email}/>
-      <MyLinks />
+      <MainInput email={session ? session?.user?.email : "undefined"}/>
+      <MyLinks email={session ? session?.user?.email : "undefined"}/>
       <CardsInfo />
       <BottomBanner />
     </main>

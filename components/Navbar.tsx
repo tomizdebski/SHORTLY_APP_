@@ -56,7 +56,7 @@ const Navbar = async () => {
           {!session && (
             <Button
               text="Sign In"
-              url="/signin"
+              url="/api/signin"
               className="bg-red-nav pt-[12px] pr-[24px] pb-[12px] pl-[24px] flex flex-row  items-center justify-center shrink-0 text-[#ffffff] text-left font-saira hover:bg-red-400"
             />
           )}

@@ -28,6 +28,14 @@ const MyLinks = ({email}: any) => {
     //   });
     //  }, []);
 
+    const removeElement = (shortUrl: string) => {
+      setLinks((prevLinks: Link[]) => prevLinks.filter((el: Link) => el.shortUrl !== shortUrl));
+      axios.delete(process.env.NEXT_PUBLIC_URL + "api/links?query=" + shortUrl).then((req) => {
+        const { data } = req;
+        console.log('deleted ' + data)
+      });
+    };
+
      
 
   return (
@@ -35,20 +43,20 @@ const MyLinks = ({email}: any) => {
 
         {links.map((el : Link) => (<div key={el.shortUrl} className="w-[1000px] h-auto  items-center justify-between flex flex-col sm:flex-row pt-5 bg-white m-auto">
         <div className="p-2.5 justify-center items-center gap-2.5 flex">
-          <div className="text-black text-base font-bold font-saira leading-[17.60px]">
+          <div className="text-black leading-[17.60px]">
             {el.url}
           </div>
         </div>
         <div className="h-12 justify-between items-center flex">
           <div className="h-[47px] p-2.5 justify-center items-center gap-2.5 flex">
-            <div className="grow shrink basis-0 text-red-600 text-base font-bold font-saira leading-7">
+            <div className="grow shrink basis-0 text-red-600  font-saira leading-7">
               {el.shortUrl}
             </div>
           </div>
           <div className="justify-center items-center flex gap-2">
            
             <CopyButton text={el.shortUrl} />
-             <button className="w-12 h-12 p-3 bg-white border border-red-600 bg-opacity-95 justify-center items-center gap-2.5 flex  hover:bg-red-400">
+             <button onClick={() => removeElement(el.shortUrl)} className="w-12 h-12 p-3 bg-white border border-red-600 bg-opacity-95 justify-center items-center gap-2.5 flex  hover:bg-red-400">
               <Image src="red_remove.svg" width={16} height={16} alt="remove" />
             </button>
           </div>
