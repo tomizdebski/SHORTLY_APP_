@@ -5,6 +5,8 @@ import Button from "./Button";
 import axios from "axios";
 import { LinksContext } from "./LinksContext";
 
+
+
 type Link = {
   url: string;
   shortUrl: string;
@@ -30,7 +32,7 @@ const MyLinks = ({email}: any) => {
   return (
     <div className="flex flex-col w-[100%] items-center bg-white pt-10">
 
-        {links.map((el : Link) => (<div className="w-[1000px] h-auto  items-center justify-between flex flex-col sm:flex-row pt-5 bg-white m-auto">
+        {links.map((el : Link) => (<div key={el.shortUrl} className="w-[1000px] h-auto  items-center justify-between flex flex-col sm:flex-row pt-5 bg-white m-auto">
         <div className="p-2.5 justify-center items-center gap-2.5 flex">
           <div className="text-black text-base font-bold font-saira leading-[17.60px]">
             {el.url}

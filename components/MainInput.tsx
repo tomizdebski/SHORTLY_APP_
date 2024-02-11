@@ -29,7 +29,7 @@ const MainInput = ({email}: any) => {
     })
       .then((res) => res.json())
       .then((data) => {
-        setLinks([...links, data]);
+        if(!data.error) {setLinks([...links, data])};
         console.log(data);
       });
   };
