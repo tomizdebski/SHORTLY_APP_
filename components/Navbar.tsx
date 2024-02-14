@@ -5,6 +5,7 @@ import Button from "./Button";
 import { getServerSession } from "next-auth";
 import { authOptions } from "./../app/lib/auth";
 import { Logout } from "./Buttons";
+import logo from '@/public/logo.svg';
 
 const Navbar = async () => {
   const session = await getServerSession(authOptions);
@@ -16,7 +17,7 @@ const Navbar = async () => {
         <Link href="/" className="shrink-0 w-[131px] h-[41px] relative">
           <div className="flex flex-row gap-1 items-center justify-start ">
             <Image
-              src="logo.svg"
+              src={logo}
               width={46}
               height={46}
               alt="Logo"

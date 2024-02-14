@@ -5,6 +5,7 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "../../lib/auth";
 import { redirect } from "next/navigation";
 import Hero from '@/components/Hero';
+import logo from '@/public/logo.svg';
 
 export default async function SignIn() {
     const session = await getServerSession(authOptions);
@@ -25,7 +26,7 @@ export default async function SignIn() {
               Shortly{" "}
             </div>
             <Image
-              src="logo.svg"
+              src={logo}
               width={50}
               height={50}
               alt="Logo"

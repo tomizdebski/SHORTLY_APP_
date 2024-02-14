@@ -1,5 +1,9 @@
 import React from "react";
 import Image from "next/image";
+import linkedin from "../public/linkedin.svg";
+import facebook from "../public/facebook.svg";
+import instagram from "../public/instagram.svg";
+import message from "../public/message.svg";
 
 const Footer = () => {
   return (
@@ -54,7 +58,7 @@ const Footer = () => {
         <div className="flex flex-row gap-[9px] items-start justify-start shrink-0 relative">
           <div className="flex flex-row gap-1 items-center justify-start ">
             <Image
-              src="linkedin.svg"
+              src={linkedin} // a {linkedin} zaimportowane działa !!!
               width={30}
               height={30}
               alt="linkedin"
@@ -64,7 +68,7 @@ const Footer = () => {
           <div className="flex flex-row gap-1 items-center justify-start "></div>
           <div className="flex flex-row gap-1 items-center justify-start ">
             <Image
-              src="facebook.svg"
+              src={facebook}
               width={30}
               height={30}
               alt="facebook"
@@ -73,7 +77,7 @@ const Footer = () => {
           </div>
           <div className="flex flex-row gap-1 items-center justify-start ">
             <Image
-              src="instagram.svg"
+              src={instagram}
               width={30}
               height={30}
               alt="instagram"
@@ -86,7 +90,7 @@ const Footer = () => {
         <div className="flex flex-row gap-4 items-center justify-center  w-[198px] relative">
           <div className="flex flex-row gap-1 items-center  ">
             <Image
-              src="message.svg"
+              src={message}
               width={32}
               height={24}
               alt="Logo"
