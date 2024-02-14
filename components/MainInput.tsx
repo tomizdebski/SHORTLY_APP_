@@ -3,36 +3,34 @@ import React from "react";
 import Button from "./Button";
 import CopyButton from "./CopyButton";
 import { useState, useEffect } from "react";
-import generateRandomString from "../helpers/genRandomString";  
+import generateRandomString from "../helpers/genRandomString";
 import { useContext } from "react";
 import { LinksContext } from "./LinksContext";
 import { set } from "mongoose";
 
-const MainInput = ({email}: any) => {
+const MainInput = ({ email }: any) => {
   const [url, setUrl] = useState("");
   const [shortUrl, setShortUrl] = useState("");
   const { links, setLinks } = useContext(LinksContext) as any;
   console.log("context", links);
 
-
   useEffect(() => {
     setShortUrl(generateRandomString(6));
-  }, [url])
-  
-  
+  }, [url]);
 
   const saveLinkToDb = async () => {
-    
     await fetch(process.env.NEXT_PUBLIC_URL + "api/links", {
       method: "POST",
       body: JSON.stringify({ url, shortUrl, email }),
     })
       .then((res) => res.json())
       .then((data) => {
-        if(!data.error) {setLinks([...links, data])};
+        if (!data.error) {
+          setLinks([...links, data]);
+        }
         console.log(data);
       });
-      await setUrl("");
+    await setUrl("");
   };
 
   return (
@@ -47,10 +45,9 @@ const MainInput = ({email}: any) => {
             value={url}
           />
           <div className="flex flex-row gap-0 items-start justify-start shrink-0 relative">
-           
-            <button 
-            className="bg-red-nav py-[12px] px-[88px] sm:py-[12px] sm:px-[24px]  flex-1 text-center  text-[#ffffff]  font-saira hover:bg-red-400"
-            onClick={() => saveLinkToDb()}
+            <button
+              className="bg-red-nav py-[12px] px-[88px] sm:py-[12px] sm:px-[24px]  flex-1 text-center  text-[#ffffff]  font-saira hover:bg-red-400"
+              onClick={() => saveLinkToDb()}
             >
               Shorten It!
             </button>
@@ -59,7 +56,13 @@ const MainInput = ({email}: any) => {
       </div>
 
       <div className="bg-black p-6 flex flex-col gap-3  relative top-[-100px] shadow-3xl  shadow-red-600 h-[144px] w-[90%] sm:hidden">
-        <div className="bg-[#ffffff] self-stretch shrink-0 h-[42px] relative overflow-hidden"></div>
+        <input
+          className="bg-[#ffffff] text-black self-stretch shrink-0 h-[42px] relative overflow-hidden"
+          onChange={(ev) => setUrl(ev.target.value)}
+          type="text"
+          placeholder="Shorten a link here..."
+          value={url}
+        />
         <div className="bg-[rgba(228,2,2,0.94)] pt-3 pr-[97px] pb-3 pl-[97px] flex flex-col h-[42px] gap-3 items-center justify-center self-stretch relative overflow-hidden hover:bg-red-400">
           <button
             className="text-[#ffffff] text-left font-saira  relative  "
