@@ -13,8 +13,8 @@ const CopyButton = ({ text }: {text:String}) => {
     };
   
     return (
-      <button onClick={copyToClipboard} className='bg-red-nav py-[12px] px-[88px] sm:py-[12px] sm:px-[24px]  flex-1 text-center  text-white  font-saira hover:bg-red-400'>
-        Copy !
+      <button onClick={copyToClipboard} className='bg-red-nav py-[12px] px-[24px] sm:py-[12px] sm:px-[24px]  flex-1 text-center  text-white  font-saira hover:bg-red-400'>
+        Copy
       </button>
     );
   };

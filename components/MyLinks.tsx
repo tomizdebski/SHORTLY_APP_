@@ -39,9 +39,9 @@ const MyLinks = ({email}: any) => {
      
 
   return (
-    <div className="flex flex-col w-[100%] items-center bg-white pt-10">
+    <div className="flex flex-col w-[100%] items-center bg-white pt-10 px-12">
 
-        {links.map((el : Link) => (<div key={el.shortUrl} className="w-[100%] h-auto  items-center justify-between flex flex-col sm:flex-row pt-5 bg-white m-auto">
+        {links.map((el : Link) => (<div key={el.shortUrl} className="w-[100%] h-auto  items-center justify-between flex flex-col md:flex-row pt-5 bg-white m-auto">
         <div className="p-2.5 justify-center items-center gap-2.5 flex ">
           <div className="text-black leading-[17.60px] ">
             {el.url}
