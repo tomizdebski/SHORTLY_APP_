@@ -33,6 +33,19 @@ const MainInput = ({ email }: any) => {
     await setUrl("");
   };
 
+  const saveLinkToLocalStorage = () => {
+    const link = { url, shortUrl, email };
+    const existingLinks = localStorage.getItem("links");
+    const linksArray = existingLinks ? JSON.parse(existingLinks) : [];
+    linksArray.push(link);
+    localStorage.setItem("links", JSON.stringify(linksArray));
+    console.log(localStorage.getItem("links"));
+  };
+
+  
+
+
+
   const isValidUrl = (url: string) => {
     const urlRegex = /^(ftp|http|https):\/\/[^ "]+$/;
     return urlRegex.test(url);
@@ -46,6 +59,7 @@ const MainInput = ({ email }: any) => {
   const handleSubmit = () => {
     if (isValidUrl(url)) {
       saveLinkToDb();
+      saveLinkToLocalStorage();
     } else {
       setUrl("This is not a valid URL. Please enter a valid URL.");
     }
